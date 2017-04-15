@@ -31,7 +31,7 @@ mounter.autoMount(conf, function(mounted) {
 var nas_mounted_actions = function() {
   is_mounted = true;
   console.log("Have mount point, moving path to ",conf.mount_path);
-  ftp_root = path.join(process.cwd(),conf.mount_path);
+  ftp_root = path.join(conf.mount_path);
   connections.forEach(function(conn,idx) {
     if ( ! conn.socket ) {
       connections.splice(connections.indexOf(conn),1);
