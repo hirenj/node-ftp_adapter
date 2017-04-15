@@ -11,6 +11,7 @@
   "dependencies": {
     "ftpd": "^0.2.15",
     "nconf": "^0.8.4",
-    "node-panasync": "hirenj/node-panasync"
+    "node-panasync": "hirenj/node-panasync",
+    "wake_on_lan": "0.0.4"
   }
 }

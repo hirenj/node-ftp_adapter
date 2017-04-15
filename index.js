@@ -4,6 +4,7 @@ var ftpd = require('ftpd');
 var fs = require('fs');
 var path = require('path');
 var nconf = require('nconf');
+var wol = require('wake_on_lan');
 
 // First consider commandline arguments and environment variables, respectively.
 nconf.argv().env();
@@ -97,7 +98,9 @@ server.on('client:connected', function(connection) {
   var username = null;
   console.log('client connected: ' + connection.remoteAddress);
   connections.push(connection);
-
+  if (config.mac) {
+    wol.wake(config.mac);    
+  }
   // Boot up NAS here
 
   connection.on('command:user', function(user, success, failure) {
