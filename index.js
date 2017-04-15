@@ -62,7 +62,7 @@ var copy_file = function(source) {
   var stat = fs.statSync(source);
   var destfile = path.join(ftp_root,path.basename(source));
   var copy_stream = fs.createReadStream(source).pipe(fs.createWriteStream(destfile));
-  copy_stream.on('finish',function() {
+  copy_stream.on('close',function() {
     fs.unlinkSync(source);
     fs.utimesSync(destfile, stat.atime, stat.mtime);
     console.log("Finished copying ",source);
