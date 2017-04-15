@@ -98,8 +98,8 @@ server.on('client:connected', function(connection) {
   var username = null;
   console.log('client connected: ' + connection.remoteAddress);
   connections.push(connection);
-  if (config.mac) {
-    wol.wake(config.mac);    
+  if (conf.mac) {
+    wol.wake(conf.mac);    
   }
   // Boot up NAS here
 
