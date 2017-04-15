@@ -144,4 +144,5 @@ server.on('client:connected', function(connection) {
 });
 
 server.listen(ftp_options.port);
+server.debugging = 4;
 console.log('Listening on port ' + ftp_options.port);
