@@ -1,0 +1,16 @@
+{
+  "name": "node-ftp_adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ftpd": "^0.2.15",
+    "nconf": "^0.8.4",
+    "node-panasync": "hirenj/node-panasync"
+  }
+}
